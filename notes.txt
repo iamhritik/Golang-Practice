@@ -14,3 +14,12 @@
             var VarTest int
             VarTest = 32
     Basic GO data types -> bool,string,int,float64
+
+    slices and loops:
+        array - fixed length list of things and slice - an array that can grow or shrink (same type of datatype exists in it)
+        slice declaration:
+            cards := []string{"Ace of Diamonds", newCard()} // type should be singular
+        for loop:
+            for index, card := range cards { -> index of this element in the array, current card we are iterating over, take the slice of cards and loop over it
+                fmt.Printlin(card) // run this one time for each card in the slice
+            }
