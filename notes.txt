@@ -5,3 +5,12 @@
     go install -> compiles and installs a package
     go get -> downloads the raw source code of someone else's package
     go test -> runs any tests associated with the current project
+
+// Day 2
+    variable declaration:
+        var VarName type = VarValue | GO is static Types  unlike python that is dynamic type that's why we need to define VarType at the time of declaration.| works outside of func block as well
+        you can also define variable like this: VarName := "Var value 123" only within the func block
+        you can also initialize a var and then later assign a value to it:
+            var VarTest int
+            VarTest = 32
+    Basic GO data types -> bool,string,int,float64
