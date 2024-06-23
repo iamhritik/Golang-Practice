@@ -27,3 +27,18 @@
     Go is not OOriented language
     receiver function -  func (d deck) print() {} -> It means any variable of type "deck" not gets access to the "print" method and this d variable -> is like self in python and it should be 1-2 alphabet
         - By creating a new type with a function that has a receiver, we are adding a 'method' to any value of that type and we don't ever reference a receiver value as 'this' or 'self'
+
+// Day 3
+    Slices are zero-indexed, for example:
+    fruits = []string{"apple","banana","grape","orange"}
+    fruits[0] --> apple
+    fruits[3] --> orange
+    fruits[0:2] --> apple,banana // fruits[startIndexIncluding:upToNotIncluding], fruits[:2] or fruits[2:] --> grape.orange
+
+    you can return multiple values from a func like this:
+    func deal(d deck,handSize int) (deck,deck) { // over here returning 2 values of deck type
+        return d[:handSize],d[handSize:]
+    }
+
+    what is byte slice ? -> string of characters changed into ascii character code (decimal)
+    used os package - WriteFile func to save data in a file

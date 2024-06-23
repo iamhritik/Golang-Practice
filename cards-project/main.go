@@ -8,10 +8,17 @@ func main() {
 	// for i, card := range cards { // iterating cards slice var
 	// 	fmt.Println(i, card) // print index and it's value
 	// }
+
+	// cards := newDeck()
+
+	// hand, remainingCards := deal(cards, 5)
+	// hand.print()
+	// remainingCards.print()
+
 	cards := newDeck()
-	cards.print()
+	cards.saveToFile("my_cards.txt")
 }
 
-func newCard() string { //need to define the return type of this func by adding string after ()
-	return "Five of Diamonds"
-}
+// func newCard() string { //need to define the return type of this func by adding string after ()
+// 	return "Five of Diamonds"
+// }
