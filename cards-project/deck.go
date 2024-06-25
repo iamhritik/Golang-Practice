@@ -2,6 +2,7 @@ package main
 
 import ( // no need to use any separator like "," to separate these 2 packages that we are importing in this file
 	"fmt"
+	"math/rand"
 	"os"
 	"strings"
 )
@@ -53,4 +54,11 @@ func newDeckFromFile(filename string) deck {
 	}
 	s := strings.Split(string(bs), ",") // splitting string using "," as separator
 	return deck(s)
+}
+
+func (d deck) shuffle() {
+	for i := range d {
+		newPosition := rand.Intn(len(d) - 1) // over here Intn - pseudo random no generator
+		d[i], d[newPosition] = d[newPosition], d[i]
+	}
 }
