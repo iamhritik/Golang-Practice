@@ -15,8 +15,11 @@ func main() {
 	// hand.print()
 	// remainingCards.print()
 
-	cards := newDeck()
-	cards.saveToFile("my_cards.txt")
+	// cards := newDeck()
+	// cards.saveToFile("my_cards.txt")
+
+	cards := newDeckFromFile("my_cards.txte")
+	cards.print()
 }
 
 // func newCard() string { //need to define the return type of this func by adding string after ()

@@ -42,3 +42,6 @@
 
     what is byte slice ? -> string of characters changed into ascii character code (decimal)
     used os package - WriteFile func to save data in a file
+
+// Day 4
+    read data forom file using ReadFile
