@@ -45,3 +45,11 @@
 
 // Day 4
     read data forom file using ReadFile
+
+// Day 5
+    Go testing -> is not like jasmine,selenium. To make a test, create a new file ending in _test.go
+    test scenarios
+        - 4 cards must be in the deck
+            logic => create a new deck -> write if statement to see if deck has right no of cards -> if it doesn't,then tell go handleer that something went wrong
+        - first card would be Ace of Spades
+        to test any func, create a new func with name TestNewDeck
