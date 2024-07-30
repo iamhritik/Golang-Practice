@@ -33,7 +33,7 @@ func (d deck) print() { // works as a receiver and instead of print you can defi
 	}
 }
 
-func deal(d deck, handSize int) (deck, deck) { //over here returning 2 values
+func deal(d deck, handSize int) (deck, deck) { //over here returning 2 values and if we create this func as receiver then it creates little bit of ambiguity in what the func does
 	return d[:handSize], d[handSize:]
 }
 
