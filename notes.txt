@@ -53,3 +53,12 @@
             logic => create a new deck -> write if statement to see if deck has right no of cards -> if it doesn't,then tell go handleer that something went wrong
         - first card would be Ace of Spades
         to test any func, create a new func with name TestNewDeck
+
+// Day  - @
+    Go refers to as pass by value lang => where when you pass some value into some func - it will create a copy of that value and pass that copy to the function. [so function working on the copied data not the original one]
+
+    We can address the above pass by value lang problem and modify the actual underlaying data structure through the use of POINTERS
+
+    But this problem is not occurs in case of SLICE and we can directly update the original value in slice type.
+
+    func (pointerToPerson *person) updateName(newFirstName string) - in this receiver - *person -> in this case * is not a operator that gives the value of this memory address it's pointing to but this is a type description and it means that this updateName func can only be called with a receiver of a pointer to a person [specifying that we want a type of pointer to a person]
