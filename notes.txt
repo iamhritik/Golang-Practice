@@ -62,3 +62,13 @@
     But this problem is not occurs in case of SLICE and we can directly update the original value in slice type.
 
     func (pointerToPerson *person) updateName(newFirstName string) - in this receiver - *person -> in this case * is not a operator that gives the value of this memory address it's pointing to but this is a type description and it means that this updateName func can only be called with a receiver of a pointer to a person [specifying that we want a type of pointer to a person]
+
+
+    Problem not occurs in SLICE data type because slice is reference type but struct is not and in case of slice it's consists of 3 elements - pointer to head, length and capacity
+    length - how many values currently stored in it
+    capacity - how many values it can store
+    pointer to head - points to the ARRAY where it stores the actual data
+
+    so whenever u call a function and pass slice value to it, GO behaves as pass by values lang and creates a copy of it and that copy of 3elements still points to the same ARRAY.
+
+    Other reference types - slices,maps,channels,pointers and functions
