@@ -64,7 +64,7 @@
     func (pointerToPerson *person) updateName(newFirstName string) - in this receiver - *person -> in this case * is not a operator that gives the value of this memory address it's pointing to but this is a type description and it means that this updateName func can only be called with a receiver of a pointer to a person [specifying that we want a type of pointer to a person]
 
 
-    Problem not occurs in SLICE data type because slice is reference type but struct is not and in case of slice it's consists of 3 elements - pointer to head, length and capacity
+    Problem not occurs in SLICE data type because slice is reference type but struct is not and in case of slice - it's an Array and a structure that consists of 3 elements - pointer to head, length and capacity
     length - how many values currently stored in it
     capacity - how many values it can store
     pointer to head - points to the ARRAY where it stores the actual data
