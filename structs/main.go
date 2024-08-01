@@ -10,7 +10,8 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	// contact   contactInfo // or you can use simple contactInfo
+	contactInfo
 }
 
 func main() {
@@ -31,11 +32,21 @@ func main() {
 	jim := person{
 		firstName: "Hritik",
 		lastName:  "kumar",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "hritik@github.com",
 			zipCode: 11009999,
 		},
 	}
-	fmt.Println(jim.contact.email)
+	fmt.Println(jim.contactInfo.email)
 	fmt.Printf("%+v", jim)
+	jim.updateName("Saul") // but it's not updating the main - jim struct firstName due to some Pointers logic
+	jim.print()
+}
+
+func (p person) print() { // receiver function
+	fmt.Printf("%v", p) // %v - just values , %+v -> field name and value
+}
+
+func (p person) updateName(newFirstName string) {
+	p.firstName = newFirstName
 }
