@@ -72,3 +72,8 @@
     so whenever u call a function and pass slice value to it, GO behaves as pass by values lang and creates a copy of it and that copy of 3elements still points to the same ARRAY.
 
     Other reference types - slices,maps,channels,pointers and functions
+
+
+INTERFACES - 
+    we use interfaces to define a method set or a function set - kind of defining what something of type bot -> what different functions and return types it should have
+    BY defining this interfaces - you are telling GO - why well anything that kind of matches this description right here of type bot is now type bot.
