@@ -21,11 +21,11 @@ func main() {
 	// resp.Body.Read(bs)          // Read takes bytes slice and read the data and put it in the byte slice
 	// fmt.Println(string(bs))
 	lw := logWriter{}
-	io.Copy(lw, resp.Body)
-
+	io.Copy(lw, resp.Body) // 1st args - Writer and 2nd args - Reader
 }
 
 func (logWriter) Write(bs []byte) (int, error) {
 	fmt.Println(string(bs))
+	fmt.Println("--------------------------------")
 	return len(bs), nil
 }
