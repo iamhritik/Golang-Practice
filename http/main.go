@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-type logWriter struct{} // custom interface
+type logWriter struct{} // custom interface - creating a new type logWriter of struct type
 
 func main() {
 	resp, err := http.Get("https://homelane.com")
