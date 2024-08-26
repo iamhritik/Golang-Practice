@@ -77,3 +77,24 @@
 INTERFACES - 
     we use interfaces to define a method set or a function set - kind of defining what something of type bot -> what different functions and return types it should have
     BY defining this interfaces - you are telling GO - why well anything that kind of matches this description right here of type bot is now type bot.
+
+Routines - 
+   Whenever we create a program and compile it - we automatically create one GO Routine. It takes all the lines of program and executes it one by one. -> Executes our CODE
+   if u want to use a new GO Routine for a func - just use go before calling that function.
+    - go checkLink(link) -> checkLink is a func
+    Whenever this New GO Routine stucks in BLocking call - it notify the code that currently I;m in blocking call stage - IN the meanwhile you can execute other GO Routines.
+    It basically creates a new thread for that GO Routine - that executes the code
+
+    One CPU COre > Go Scheduler (Scheduler runs one until it finishes or makes a blocking call) -> GO Routine |  GO Routine |  GO Routine
+    so this GO Scheduler runs only 1 GO Routine at a time - in case of 1 CPU Core. (By Default GO tries to use 1 CPU CORE only) 
+
+    In case of Multiple CPU Core - we can run multiple GO Routine at the same time - parallelism
+
+    Concurrency is not parallelism.
+        - Concurrency - WE can have multiple threads executing code.If one thread blocks,another one is picked up and worked on
+        - parallelism - Multiple threads executed at the exact same time - requires multiple CPUs
+
+
+    Default Go Routine - Main Routine - created when we launched our program
+        Other GO Routines - 
+            - Child GO Routine - created by the go keyword, not getting same respect like Main GO Routine
