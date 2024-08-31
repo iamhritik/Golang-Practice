@@ -98,3 +98,8 @@ Routines -
     Default Go Routine - Main Routine - created when we launched our program
         Other GO Routines - 
             - Child GO Routine - created by the go keyword, not getting same respect like Main GO Routine
+
+    Note - you can use this GO keyword only in front of functions
+
+Channels:
+    - To communicate between 2 Routines and if your code is waiting for a value in any interface - it's a blocking call for that code.
