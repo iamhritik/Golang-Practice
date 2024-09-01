@@ -103,3 +103,11 @@ Routines -
 
 Channels:
     - To communicate between 2 Routines and if your code is waiting for a value in any interface - it's a blocking call for that code.
+
+
+Function literal
+    - it's like lambda function in python or anonymous function
+		go func() { // function literal
+			// time.Sleep(time.Second)     //time.Second -> is duration type -> int64
+			time.Sleep(5 * time.Second) //if u want to sleep for 5sec -> simply multiply this time.Second with 5 => but this is a blocking call for MAIN Routine
+		}() // - this parenthesis to - call that anonymous func
