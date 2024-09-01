@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"time"
 )
 
 func main() {
@@ -24,16 +25,23 @@ func main() {
 	// 	fmt.Println(<-c)
 	// }
 
-	// for {
+	// for { // it's not properly styled and getting clear understanding of this code
 	// 	go checkLink(<-c, c) // blocking call - waiting for value from this <-c channel
 	// }
 
-	for l := range c { // assign the value that we got from this channel -> c
-		go checkLink(l, c)
+	for l := range c { // range gets the value that we got from this channel -> c
+		go func(link string) {
+			// fmt.Println("channel range caller ------>")
+			// time.Sleep(time.Second)     //time.Second -> is duration type -> int64
+			time.Sleep(5 * time.Second) //if u want to sleep for 5sec -> simply multiply this time.Second with 5 => but this is a blocking call for MAIN Routine
+			checkLink(link, c)
+			// fmt.Println("called checkLink func() ------>")
+		}(l) //invoking func literal (anonymous func) here | now this func literal not using l -> var value that's outer scope and can we changed by main routine
 	}
 }
 
 func checkLink(link string, c chan string) {
+	// time.Sleep(5 * time.Second) //if u want to sleep for 5sec -> simply multiply this time.Second with 5 => but this is a blocking call for MAIN Routine
 	_, err := http.Get(link)
 	if err != nil {
 		fmt.Println(link, "might be down!")
