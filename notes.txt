@@ -111,3 +111,7 @@ Function literal
 			// time.Sleep(time.Second)     //time.Second -> is duration type -> int64
 			time.Sleep(5 * time.Second) //if u want to sleep for 5sec -> simply multiply this time.Second with 5 => but this is a blocking call for MAIN Routine
 		}() // - this parenthesis to - call that anonymous func
+
+modules:
+    strconv
+    bufio
