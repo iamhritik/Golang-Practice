@@ -15,7 +15,7 @@ func main() {
 		countLines(os.Stdin, counts)
 	} else {
 		for _, arg := range files {
-			f, err := os.Open(arg)
+			f, err := os.Open(arg) // returns 2 values - > *os.File, and built-in error type
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "error while opening file: %v\n", err)
 				continue
@@ -23,6 +23,7 @@ func main() {
 			// fmt.Printf("opening file and starts reading it")
 			countLines(f, counts)
 			f.Close()
+			fmt.Println(counts)
 		}
 	}
 	for line, n := range counts {
